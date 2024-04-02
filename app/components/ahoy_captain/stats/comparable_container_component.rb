@@ -38,6 +38,7 @@ module AhoyCaptain
 
       def percentage
         begin
+          return 0 if value.current.nil? || value.compared_to.nil?
           diff = value.current - value.compared_to
           if diff.zero?
             return 0
